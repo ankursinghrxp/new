@@ -47,6 +47,6 @@ jobs:
         if: success()
         run: | 
           sudo apt-get install mailutils 
-          echo "Commit: ${{ github.event.head_commit.url }} " | mailx -s "${{ github.event.head_commit.message }}" -aFrom:${{ secrets.EMAIL_NAME }} ${{ secrets.EMAIL_LIST }}
+          echo "Commit: ${{ github.event.head_commit.url }} " | mailx -s "${{ github.event.head_commit.message }}" -aFrom:${{ secrets.EMAIL_USERNAME }} ${{ secrets.EMAIL_LIST }}
 
 
