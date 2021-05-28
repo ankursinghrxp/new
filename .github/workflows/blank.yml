@@ -43,5 +43,11 @@ jobs:
           title: ${{ github.event.head_commit.message }} 
           summary: Design Ops new Release deployed
           text: Commit Url ${{ github.event.head_commit.url }} 
+      - name: Send Email
+        uses: mmichailidis/sendgrid-mail-action@v1.0
+        with:
+         sendgrid-token: 'sample'
+         from: 'ankur.singh@rxpservices.com'
+         mail: 'ankur.singh@rxpservices.com'
 
 
