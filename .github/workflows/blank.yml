@@ -44,11 +44,6 @@ jobs:
           summary: Design Ops new Release deployed
           text: Commit Url ${{ github.event.head_commit.url }} 
       - name: Send Email Notification
-        uses: mmichailidis/sendgrid-mail-action@v1.0
-        with:
-         sendgrid-token: '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'
-         mail: 'ankursingh2111@gmail.com'
-         subject: ${{ github.event.head_commit.message }} 
-         text: Commit Url ${{ github.event.head_commit.url }} 
+        run: echo "${{ github.event.head_commit.message }} " | mail -s "Subject" -aFrom:Ankur\<ankur.singh@rxpservices.com\> ankur.singh@rxpservices.com
 
 
