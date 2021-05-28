@@ -39,9 +39,9 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
          # mail server settings
-         server_address: outlook.office365.com
-         server_port: 443
-         secure: true
+         server_address: smtp.office365.com
+         server_port: 587
+         secure: false
          # user credentials
          username: ${{ secrets.EMAIL_USERNAME }}
          password: ${{ secrets.EMAIL_PASSWORD }}
