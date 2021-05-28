@@ -34,7 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Send mail
+          echo ${{github}}
+      - name: Send Teams Notification
         if: success()
         uses: aliencube/microsoft-teams-actions@v0.8.0
         with:
