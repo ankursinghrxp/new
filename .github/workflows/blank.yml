@@ -45,7 +45,7 @@ jobs:
           text: Commit Url ${{ github.event.head_commit.url }} 
       - name: Send Email Notification
         run: | 
-          sudo apt-get install postfix 
+          sudo apt-get install mailutils 
           echo "${{ github.event.head_commit.message }} " | mailx -s "Subject" -aFrom:Ankur\<ankur.singh@rxpservices.com\> ankur.singh@rxpservices.com
 
 
