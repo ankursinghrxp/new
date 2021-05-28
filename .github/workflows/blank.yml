@@ -44,6 +44,8 @@ jobs:
           summary: Design Ops new Release deployed
           text: Commit Url ${{ github.event.head_commit.url }} 
       - name: Send Email Notification
-        run: echo "${{ github.event.head_commit.message }} " | mail -s "Subject" -aFrom:Ankur\<ankur.singh@rxpservices.com\> ankur.singh@rxpservices.com
+        run: | 
+          apt-get install postfix 
+          echo "${{ github.event.head_commit.message }} " | mailx -s "Subject" -aFrom:Ankur\<ankur.singh@rxpservices.com\> ankur.singh@rxpservices.com
 
 
