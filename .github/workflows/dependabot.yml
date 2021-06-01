@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every weekday
+      interval: "daily"
+
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      # Check for updates managed by Composer once a week
+      interval: "weekly"
+      time: "05:00"
