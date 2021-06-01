@@ -1,0 +1,22 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankursinghrxp/new.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankursinghrxp/new/issues"
+  },
+  "dependencies": {
+    "new": "ankursinghrxp/new1"
+  },
+  "homepage": "https://github.com/ankursinghrxp/new#readme"
+}

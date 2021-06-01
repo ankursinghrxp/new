@@ -1,5 +1,13 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+
+  "hostRules": [
+    {
+      "hostType": "github",
+      "matchHost": "https://github.com/ankursinghrxp/new1",
+      "username": "ankursinghrxp"
+    }
+  ],
+
+  "schedule": ["before 3pm"]
 }
