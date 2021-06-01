@@ -5,7 +5,7 @@ updates:
     schedule:
       # Check for updates to GitHub Actions every weekday
       interval: "daily"
-      time: "05:07"
+      time: "05:14"
 
   - package-ecosystem: "composer"
     directory: "/"
