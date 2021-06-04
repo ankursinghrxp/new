@@ -40,7 +40,7 @@ jobs:
         uses: aliencube/microsoft-teams-actions@v0.8.0
         with:
           webhook_uri: ${{ secrets.TEAMS_WEBHOOK }}
-          title: ${{ github.event.head_commit.message }} : ${{ toJson(github.event.head_commit.author) }}
+          title: ${{ github.event.head_commit.message }} - ${{ toJson(github.event.head_commit.author.name) }}
           summary: Author ${{ toJson(github.event.head_commit.author) }}
           text: Commit Url ${{ github.event.head_commit.url }} 
 
