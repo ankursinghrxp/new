@@ -34,12 +34,13 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo "${{ toJson(github.event.head_commit) }}"
       - name: Send Teams Notification
         if: success()
         uses: aliencube/microsoft-teams-actions@v0.8.0
         with:
           webhook_uri: ${{ secrets.TEAMS_WEBHOOK }}
-          title: ${{ github.event.head_commit.message }}  ${{ github.event.head_commit.author }} 
+          title: ${{ github.event.head_commit.message }}
           summary: Design Ops new Release deployed
           text: Commit Url ${{ github.event.head_commit.url }} 
       - name: Send Email Notification
