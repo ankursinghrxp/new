@@ -43,7 +43,7 @@ jobs:
           title: ${{ github.event.head_commit.message }}
           summary: Author ${{ toJson(github.event.head_commit.author) }}
           text: Commit Url ${{ github.event.head_commit.url }} 
-          sections: '[{ "activityTitle": "Author: ${{ toJson(github.event.head_commit.author) }}" }, {"value":${{ toJson(github.event.head_commit.author) }}} ]'
+          sections: '[{ "activityTitle": ${{ toJson(github.event.head_commit.author) }} }, {"value":${{ toJson(github.event.head_commit.author) }}} ]'
       - name: Send Email Notification
         if: success()
         run: | 
